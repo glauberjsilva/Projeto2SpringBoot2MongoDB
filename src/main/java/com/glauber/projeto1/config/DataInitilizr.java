@@ -42,18 +42,13 @@ public class DataInitilizr implements ApplicationListener<ContextRefreshedEvent>
 		User user = userRepository.findByEmail("joao@gmail.com");
 		System.out.println(user.getEmail());
 		
-		user = userRepository.findByNameQualquerCoisa("G");
-		System.out.println(user.getName());
-		
-		user = userRepository.findByNameAndEmail("Maria", "maria@gmail.com");
-		System.out.println(user.getName());
 		
 		user = userRepository.findByNameIgnoreCase("glauber");
 		System.out.println(user.getName());
 	
 		
 		System.out.println("Deletando " + user.getName());
-		userRepository.deleteById(user.getId());
+		//userRepository.deleteById(user.getId());
 		
 	}
 
